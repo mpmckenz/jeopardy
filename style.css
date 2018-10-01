@@ -1,0 +1,10 @@
+section {
+    display: flex;
+}
+
+article {
+    display: flex;
+    border: 1px solid black;
+    width: 125px;
+    height: 100px;
+}

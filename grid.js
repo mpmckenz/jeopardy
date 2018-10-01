@@ -27,7 +27,6 @@ class Grid {
                 this.rowArray.push(cell)
             }
         }
-        console.log(this.gridArray)
     }
 }
 
@@ -37,14 +36,13 @@ class Cell {
         this.rowIndex = rowIndex
         this.columnIndex = columnIndex
         this.rowParent = rowParent
-        this.id = `${rowIndex} , ${columnIndex}`
         this.createCell()
     }
     createCell() {
         this.cellElement = document.createElement("article")
-        // this.cellElement.dataset.rowIndex = this.rowIndex
-        // this.cellElement.dataset.columnIndex = this.columnIndex
-        // this.cellElement.id = this.columnIndex
+        this.cellElement.dataset.rowIndex = this.rowIndex
+        this.cellElement.dataset.columnIndex = this.columnIndex
+        this.cellElement.id = `${this.columnIndex},${this.rowIndex}`
         this.rowParent.appendChild(this.cellElement)
     }
 }
